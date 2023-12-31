@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+        <h1>
+            Nos bars :
+        </h1>
+        <div id = "container">
+            <div class="card">
+                <p><span>Lille</span></p>
+                <p><span>Valenciennes</span></p>
+                <p><span>Trith St léger</span></p> 
+            </div>
+            <div id = "desc">
+                <h2> Info du Bar :</h2>
+            </div>
+        </div>
+
+    <style>
+        body
+        {
+            background-color : #212121;
+        }
+        h1 
+        {
+            text-decoration: underline;
+            color : #ff568e;
+        }
+
+        h2
+        {
+            color : #ff568e;
+            text-decoration : underline;
+        }
+
+        #container
+        {
+            text-align:center;
+            display: flex;
+            width:90vw;
+            margin: 0 auto;
+        }
+
+        #desc {
+            border-radius: 13px;
+            background: linear-gradient(145deg, #232323, #1e1e1e);
+            box-shadow:  11px 11px 22px #151515,-11px -11px 22px #2d2d2d;
+            width : 50vw;
+            margin-left : 30px;
+        }
+        .card {
+        width: 410px;
+        height: 454px;
+        border-radius: 10px;
+        background: #212121;
+        display: flex;
+        gap: 5px;
+        padding: .4em;
+        }
+
+        .card p {
+        height: 100%;
+        flex: 1;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 2px;
+        transition: all .5s;
+        background: #212121;
+        border: 1px solid #ff5a91;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .card p:hover {
+        flex: 4;
+        }
+
+        .card p span {
+        min-width: 14em;
+        padding: .5em;
+        text-align: center;
+        transform: rotate(-90deg);
+        transition: all .5s;
+        text-transform: uppercase;
+        color: #ff568e;
+        font-size : 35px;
+        letter-spacing: .1em;
+        }
+
+        .card p:hover span {
+        transform: rotate(0);
+        }
+
+
+{% endblock %}
